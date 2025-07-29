@@ -1,3 +1,4 @@
+
 import React from "react";
 import Image from "next/image";
 import onlineBadgeIcon from "../../../../assests/icons/online.webp";
@@ -55,19 +56,22 @@ const cartData = [
 const AllBachesTabs = () => {
   return (
     <div
-      className={` ${fontReddit.weight} lg:max-w-6xl md:max-w-3xl max-w-sm mx-auto lg:px-0 md:px-3 px-2 `}
+      className={` ${fontReddit.weight} lg:max-w-6xl md:max-w-3xl max-w-sm mx-auto lg:px-0 md:px-3 px-2 md:ms-0 -ms-4 `}
     >
       <h1 className="text-3xl font-bold py-5">Class 11 NEET Courses</h1>
 
       {/* Cart Slider */}
-      <div className="flex gap-5 pb-6 hide-scrollbar">
+      {/* <div className="flex gap-5 pb-6 hide-scrollbar"> */}
+        <div className="flex gap-5 pb-6 overflow-x-auto scrollbar-hide flex-nowrap md:overflow-x-auto md:flex-nowrap lg:overflow-visible lg:flex-wrap">
+
         {cartData.map((item, i) => {
           const isLast = i === cartData.length - 1;
 
           return (
+            <div key={i} className=" py-5">
             <div
               key={i}
-              className="relative w-[350px] h-[460px] shrink-0 rounded-xl border-gray-300 shadow-lg p-2"
+              className="relative w-[350px] h-[460px] rounded-xl border-gray-300 shadow-lg p-2"
             >
               {isLast ? (
                 <div className="relative w-full h-full">
@@ -184,6 +188,7 @@ const AllBachesTabs = () => {
                   />
                 </>
               )}
+            </div>
             </div>
           );
         })}

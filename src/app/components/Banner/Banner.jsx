@@ -100,7 +100,7 @@ const Banner = () => {
           </div>
           {/* ------------------------------------  */}
           <div className=" py-7">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4 gap-10 p-6 bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-4 md:gap-6 gap-10 p-6 bg-white">
               {resources.map((res, index) => (
                 <div
                   key={index}
