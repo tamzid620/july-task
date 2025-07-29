@@ -64,6 +64,7 @@ export default function CustomizedAccordions() {
 
   return (
     <div className={` ${fontReddit.weight} lg:max-w-6xl md:max-w-3xl max-w-sm mx-auto md:px-3 px-2 py-8 `}>
+         <h1 className="text-3xl font-bold text-center py-5">NEET 2026 Preparation FAQs</h1>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography sx={{ fontWeight: 'bold' }} component="span">What is NEET 2026 and who conducts it?</Typography>

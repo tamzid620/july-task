@@ -117,6 +117,13 @@ const MoreNEET = () => {
         </tbody>
       </table>
     </div>
+    {/* -------------------------- */}
+    <div>
+ <h1 className="font-bold text-3xl mb-4">NEET 2026 Syllabus</h1>
+        <p className="text-gray-700">
+         The National Medical Commission (NMC) has not officially announced the NEET 2026 Syllabus yet. Currently, the syllabus for NEET 2025 is being followed, which is the same as the syllabus used in NEET 2024 with no major changes. Students preparing for NEET 2026 can start their preparation based on the NEET 2025 syllabus until the official 2026 syllabus is released. The syllabus includes topics from Class 11 and Class 12 Physics, Chemistry, and Biology, aligned with the standard NEET exam format. Understanding the detailed syllabus provided by the NMC is crucial for thorough preparation. 
+        </p>
+    </div>
     </div>
   );
 };
