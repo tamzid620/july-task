@@ -1,7 +1,11 @@
+'use client';
 import React from "react";
 import "./Banner.css";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import bannerImage from "../../../assests/images/banner.jpg";
+import bannerImage1 from "../../../assests/images/banner-1.jpg";
 import homeIcon from "../../../assests/icons/home.png";
 import arrowIcon from "../../../assests/icons/to-right.png";
 import buttonIcon1 from "../../../assests/icons/icon-1.jpg";
@@ -41,10 +45,34 @@ const resources = [
 const Banner = () => {
   return (
     <div className={` ${fontReddit.weight} `}>
-      {/* image section  */}
-      <div>
-        <Image src={bannerImage} alt="banner" className="" />
-      </div>
+      {/* carousel image section  */}
+<div className="">
+      <Swiper
+        spaceBetween={30}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        slidesPerView={1}
+      >
+        <SwiperSlide>
+          <Image
+            src={bannerImage}
+            alt="Banner 1"
+            className="w-full h-[160px] md:h-full"
+            priority
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={bannerImage1}
+            alt="Banner 2"
+            className="w-full h-[160px] md:h-full"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
       {/* information section  */}
       <div className="info-background">
         <div className=" lg:max-w-6xl md:max-w-3xl max-w-sm mx-auto md:px-3 px-2">

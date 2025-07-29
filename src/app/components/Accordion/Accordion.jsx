@@ -90,10 +90,37 @@ export default function CustomizedAccordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography  sx={{ fontWeight: '300' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+           The official syllabus for NEET 2026 has not been released yet. Students are advised to follow the NEET 2025 syllabus, which was based on the NEET 2024 pattern and includes Class 11 and 12 NCERT topics.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
+          <Typography component="span"  sx={{ fontWeight: 'bold' }}>How many questions will NEET 2026 have and what is the marking scheme?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography  sx={{ fontWeight: '300' }}>
+           NEET 2026 will consist of 180 compulsory MCQs across Physics, Chemistry, and Biology. Each correct answer carries 4 marks, and 1 mark will be deducted for each incorrect answer.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+          <Typography component="span"  sx={{ fontWeight: 'bold' }}>What is the eligibility criteria for NEET 2026?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography  sx={{ fontWeight: '300' }}>
+          Candidates must be at least 17 years old by December 31, 2026, and should have passed 10+2 with Physics, Chemistry, Biology/Biotechnology, and English. There is no upper age or attempt limit.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
+        <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
+          <Typography component="span"  sx={{ fontWeight: 'bold' }}>In how many languages will NEET 2026 be conducted?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography  sx={{ fontWeight: '300' }}>
+          NEET 2026 will be held in 13 languages including English, Hindi, Bengali, Gujarati, Tamil, Telugu, Marathi, Kannada, Malayalam, Odia, Assamese, Urdu, and Punjabi.
           </Typography>
         </AccordionDetails>
       </Accordion>
