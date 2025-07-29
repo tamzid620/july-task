@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { fontReddit } from '@/app/config/fontsProvider';
+import AllBachesTabs from './Tabs/AllBachesTabs';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,21 +46,25 @@ export default function OnlineClassess() {
   return (
     <div className={` ${fontReddit.weight} lg:max-w-6xl md:max-w-3xl max-w-sm mx-auto md:px-3 px-2 `}>
     <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', fontWeight:'bold' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="All Baches" {...a11yProps(0)} />
+          <Tab label="Class 11" {...a11yProps(1)} />
+          <Tab label="Class 12" {...a11yProps(2)} />
+          <Tab label="Dropper" {...a11yProps(3)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        Item One
+        <AllBachesTabs/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        Class 11
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+       Class 12
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3}>
+        Dropper
       </CustomTabPanel>
     </Box>
     </div>
