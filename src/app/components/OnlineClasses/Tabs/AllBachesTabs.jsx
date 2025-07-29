@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import onlineBadgeIcon from "../../../../assests/icons/online.webp";
+import arrowLogo from "../../../../assests/icons/to-right.png";
 import cartimage1 from "../../../../assests/images/cart1-image.jpg";
 import cartimage2 from "../../../../assests/images/cart2-image.jpg";
 import cartimage3 from "../../../../assests/images/cart3-image.jpg";
@@ -59,7 +60,7 @@ const AllBachesTabs = () => {
       <h1 className="text-3xl font-bold py-5">Class 11 NEET Courses</h1>
 
       {/* Cart Slider */}
-<div className="flex gap-5 pb-6 hide-scrollbar">
+      <div className="flex gap-5 pb-6 hide-scrollbar">
         {cartData.map((item, i) => {
           const isLast = i === cartData.length - 1;
 
@@ -69,33 +70,32 @@ const AllBachesTabs = () => {
               className="relative w-[350px] h-[460px] shrink-0 rounded-xl border-gray-300 shadow-lg p-2"
             >
               {isLast ? (
-  <div className="relative w-full h-full">
-    {/* Orange Hinglish Ribbon */}
-    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-10">
-      <div className="bg-orange-500 text-white text-xs px-3 py-1 rounded-b-md shadow-md">
-        Hinglish
-      </div>
-    </div>
+                <div className="relative w-full h-full">
+                  {/* Orange Hinglish Ribbon */}
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className="bg-orange-500 text-white text-xs px-3 py-1 rounded-b-md shadow-md">
+                      Hinglish
+                    </div>
+                  </div>
 
-    {/* Banner Image */}
-    <Image
-      src={item.image}
-      alt="course banner"
-      className="w-full h-[380px] rounded-sm"
-    />
+                  {/* Banner Image */}
+                  <Image
+                    src={item.image}
+                    alt="course banner"
+                    className="w-full h-[380px] rounded-sm"
+                  />
 
-    {/* Buttons at Bottom */}
-    <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-      <button className="flex-1 bg-black text-white text-lg font-semibold rounded py-2 hover:bg-opacity-80 transition">
-        Explore Now
-      </button>
-      <button className="flex-1 bg-white text-black text-lg font-semibold rounded py-2 hover:bg-gray-200 transition">
-        Buy Now
-      </button>
-    </div>
-  </div>
-) : (
-
+                  {/* Buttons at Bottom */}
+                  <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+                    <button className="flex-1 bg-black text-white text-lg font-semibold rounded py-2 hover:bg-opacity-80 transition">
+                      Explore Now
+                    </button>
+                    <button className="flex-1 bg-white text-black text-lg font-semibold rounded py-2 hover:bg-gray-200 transition">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              ) : (
                 <>
                   <Image
                     src={item.image}
@@ -132,7 +132,8 @@ const AllBachesTabs = () => {
                       {item.startDate && (
                         <div className="flex items-center text-sm text-gray-600 mb-3">
                           <BsCalendar className="mr-2" />
-                          Starts on {item.startDate} &nbsp; Ends on {item.endDate}
+                          Starts on {item.startDate} &nbsp; Ends on{" "}
+                          {item.endDate}
                         </div>
                       )}
                       <Image
@@ -186,6 +187,12 @@ const AllBachesTabs = () => {
             </div>
           );
         })}
+      </div>
+      <div className="flex justify-center">
+        <button className="bg-blue-100 hover:bg-blue-200 flex items-center px-5 py-3 rounded-sm font-semibold">
+          View All Batches{" "}
+          <Image src={arrowLogo} alt="arrow logo" className="w-3 ms-1" />{" "}
+        </button>
       </div>
     </div>
   );
