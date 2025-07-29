@@ -84,7 +84,7 @@ const Banner = () => {
           </div>
           {/* ----------------------------------- */}
           <div>
-            <h1 className="text-4xl font-bold mb-5">
+            <h1 className="md:text-4xl text-2xl font-bold mb-5">
               NEET 2026: Syllabus, Exam Pattern, Eligibility, and Courses
             </h1>
             <p className="text-gray-700">
