@@ -1,0 +1,10 @@
+.info-background{
+ background-image: url('../../../assests/images/banner-backgorund.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  margin: 0;
+  padding: 0;
+
+}
